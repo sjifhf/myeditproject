@@ -6,14 +6,14 @@ using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {
-    /*public GameObject player; // °Ñ¦Òª±®aª«¥ó*/
+    /*public GameObject player; // ï¿½Ñ¦Òªï¿½ï¿½aï¿½ï¿½ï¿½ï¿½*/
     public Transform player;
     public Transform Maincamera;
     private WallDetector detector;
-    public float followSpeed = 5f; // Äá¼v¾÷¸òÀH³t«×
+    public float followSpeed = 5f; // ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Hï¿½tï¿½ï¿½
     public float playerDistance = 15;
-    float a = 0, b = 0, c = -5;//Äá¼v¾÷¸ò¨¤¦â¶¡¶Z
-    float playerfinalrotation = 0,t=0;
+    float a = 0, b = 0, c = -5;//ï¿½ï¿½vï¿½ï¿½ï¿½ò¨¤¦â¶¡ï¿½Z
+    float playerfinalrotation = 0;
 
     void Start()
     {
@@ -85,7 +85,7 @@ public class CameraController : MonoBehaviour
         detector.cycle = 0;
     }
 
-    // Äá¼v¾÷¥­·Æ¸òÀHª±®a
+    // ï¿½ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½Æ¸ï¿½ï¿½Hï¿½ï¿½ï¿½a
     /*IEnumerator Rotateandfollow()
     {
         
