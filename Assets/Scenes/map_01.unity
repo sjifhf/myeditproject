@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 262547860}
   - component: {fileID: 262547859}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: teachUI_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,6 +1074,20 @@ MonoBehaviour:
   ydistance: 0
   player: {fileID: 467009889}
   aim: {fileID: 543153296}
+--- !u!114 &467009902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81035460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65055b941a1bb5449b59e2f4392331f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintUI: {fileID: 262547857}
+  hideButton: {fileID: 1850383442}
 --- !u!1 &471751521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1391,7 @@ GameObject:
   - component: {fileID: 555117868}
   m_Layer: 0
   m_Name: teachUI_point
-  m_TagString: Untagged
+  m_TagString: teachUI_point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1391,7 +1405,7 @@ Transform:
   m_GameObject: {fileID: 555117866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.98, y: 5.36, z: 0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1416,7 +1430,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &580247746
 GameObject:
@@ -1430,7 +1444,7 @@ GameObject:
   - component: {fileID: 580247749}
   - component: {fileID: 580247748}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Botton_teachUI_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1452,7 +1466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12.8, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: 0.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580247748
@@ -1475,7 +1489,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'close
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1782,8 +1798,9 @@ GameObject:
   - component: {fileID: 645687276}
   - component: {fileID: 645687278}
   - component: {fileID: 645687277}
+  - component: {fileID: 645687279}
   m_Layer: 5
-  m_Name: countdown
+  m_Name: countdown_TEXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1805,7 +1822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 395.7, y: -240.6}
+  m_AnchoredPosition: {x: 384, y: -240}
   m_SizeDelta: {x: 19.7291, y: 24.8078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645687277
@@ -1905,6 +1922,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645687275}
   m_CullTransparentMesh: 1
+--- !u!114 &645687279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645687275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528fe30916b258f42ae9479e610095c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 5
+  teachUI: {fileID: 262547857}
+  countdownText: {fileID: 645687277}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,7 +3258,7 @@ GameObject:
   - component: {fileID: 1195257546}
   - component: {fileID: 1195257545}
   m_Layer: 5
-  m_Name: background
+  m_Name: teachUI_background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4757,8 +4789,9 @@ GameObject:
   - component: {fileID: 1850383446}
   - component: {fileID: 1850383445}
   - component: {fileID: 1850383444}
+  - component: {fileID: 1850383447}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_teachUI_cloes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4781,7 +4814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 432.047, y: -239.99088}
+  m_AnchoredPosition: {x: 432.047, y: -238}
   m_SizeDelta: {x: 199.284, y: 85.0793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1850383444
@@ -4827,7 +4860,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850383445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 262547857}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1850383445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4866,6 +4911,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850383442}
   m_CullTransparentMesh: 1
+--- !u!114 &1850383447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850383442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d2dc267db4c68e40b49081e8fe52369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teachUI: {fileID: 262547857}
 --- !u!1 &1872640827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,6 +5691,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 876526675004330744, guid: 3aa93420cb43cec4ea29523bf78abba7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 467009896}
+    - targetCorrespondingSourceObject: {fileID: 876526675004330744, guid: 3aa93420cb43cec4ea29523bf78abba7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 467009902}
   m_SourcePrefab: {fileID: 100100000, guid: 3aa93420cb43cec4ea29523bf78abba7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
