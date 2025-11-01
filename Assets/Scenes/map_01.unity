@@ -387,11 +387,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45632244}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 7ff105d7b2aa4704588523d01cf8957f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 2c14544689e140a4eafea242611c0e54, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -411,7 +411,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 8400000, guid: 2c14544689e140a4eafea242611c0e54, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -940,9 +940,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 45632245}
-  - {fileID: 1195257544}
   - {fileID: 1850383443}
-  - {fileID: 645687276}
+  - {fileID: 1195257544}
   m_Father: {fileID: 2125838908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1087,7 +1086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintUI: {fileID: 262547857}
-  hideButton: {fileID: 1850383442}
+  button: {fileID: 1850383444}
+  VedioPlayer: {fileID: 45632246}
 --- !u!1 &471751521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,11 +1818,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 262547858}
+  m_Father: {fileID: 1850383443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -240}
+  m_AnchoredPosition: {x: -48.046997, y: -2}
   m_SizeDelta: {x: 19.7291, y: 24.8078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645687277
@@ -3280,7 +3280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0011711121, y: 0.0002975464}
+  m_AnchoredPosition: {x: -0.0010986328, y: 0.00030517578}
   m_SizeDelta: {x: 1355.167, y: 750.3376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195257545
@@ -4789,7 +4789,7 @@ GameObject:
   - component: {fileID: 1850383446}
   - component: {fileID: 1850383445}
   - component: {fileID: 1850383444}
-  - component: {fileID: 1850383447}
+  - component: {fileID: 1850383448}
   m_Layer: 5
   m_Name: Button_teachUI_cloes
   m_TagString: Untagged
@@ -4810,6 +4810,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 580247747}
+  - {fileID: 645687276}
   m_Father: {fileID: 262547858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4862,12 +4863,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 262547857}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4911,7 +4912,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850383442}
   m_CullTransparentMesh: 1
---- !u!114 &1850383447
+--- !u!114 &1850383448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4920,10 +4921,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1850383442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2dc267db4c68e40b49081e8fe52369, type: 3}
+  m_Script: {fileID: 11500000, guid: b0923ef25919d5545b45a3b65a0bf950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teachUI: {fileID: 262547857}
+  targetButton: {fileID: 1850383444}
+  delayTime: 5
 --- !u!1 &1872640827
 GameObject:
   m_ObjectHideFlags: 0

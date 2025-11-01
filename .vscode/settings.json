@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "myeditproject.sln"
+    "dotnet.defaultSolution": "testproject.sln"
 }
