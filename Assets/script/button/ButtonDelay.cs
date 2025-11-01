@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,38 +6,34 @@ public class ButtonDelay : MonoBehaviour
 {
     public Button targetButton;  // 指定要控制的按鈕
     public float delayTime = 5f; // 延遲秒數
-
+    public GameObject teachUI;             // 教學介面（可以控制是否顯示）
 
     private void Start()
     {
         if (targetButton != null)
         {
-            // 一開始禁止點擊
-
-            // 改變按鈕顏色為灰色
-            ColorBlock colors = targetButton.colors;
-            colors.disabledColor = new Color(0.5f, 0.5f, 0.5f, 1f); // 灰色
-            targetButton.colors = colors;
+            targetButton.interactable = false; // 初始設為不可點擊
         }
+    }
+
+    public void cloeseTeachUI()
+    {
+        teachUI.SetActive(false);
     }
 
     private void Update()
     {
-        if (delayTime > 0)
+        if (teachUI.activeSelf == true)
         {
-            delayTime -= Time.deltaTime;
-        }
-
-        else
-        {
-
-            if (targetButton != null)
+            if (delayTime > 0) //倒數階段
             {
-                targetButton.interactable = true;
-                // 改成白色
-                ColorBlock colors = targetButton.colors;
-                colors.normalColor = Color.white;
-                targetButton.colors = colors;
+                delayTime -= Time.deltaTime;
+            }
+
+            else //倒數結束
+            {
+                teachUI.SetActive(true);
+                targetButton.interactable = true; // 允許點擊
             }
         }
     }
