@@ -409,7 +409,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
@@ -940,8 +940,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 45632245}
-  - {fileID: 1850383443}
   - {fileID: 1195257544}
+  - {fileID: 1850383443}
   m_Father: {fileID: 2125838908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1937,6 +1937,7 @@ MonoBehaviour:
   countdownTime: 5
   teachUI: {fileID: 262547857}
   countdownText: {fileID: 645687277}
+  teachUI_closedButton: {fileID: 1850383444}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,13 +4863,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 262547857}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1850383448}
+        m_TargetAssemblyTypeName: ButtonDelay, Assembly-CSharp
+        m_MethodName: cloeseTeachUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4926,6 +4927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetButton: {fileID: 1850383444}
   delayTime: 5
+  teachUI: {fileID: 262547857}
 --- !u!1 &1872640827
 GameObject:
   m_ObjectHideFlags: 0
