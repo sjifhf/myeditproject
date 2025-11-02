@@ -9,8 +9,10 @@ public class trigger_teachUI : MonoBehaviour
     public GameObject hintUI;
     public Button button;
     private bool canTrigger = true;
-    
-    public VideoPlayer VedioPlayer;
+
+    public VideoPlayer videoPlayer;
+
+    public GameObject RawImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,13 @@ public class trigger_teachUI : MonoBehaviour
         {
             if (canTrigger)
             {
+                hintUI.SetActive(true);
                 button.interactable = true;
                 canTrigger = false;
-                hintUI.SetActive(true); // 玩家進入 → 顯示提示
-                VedioPlayer.Play();
+                RawImage.SetActive(true);
+                videoPlayer.enabled = true;
+                videoPlayer.Play();
+                
             }
         }
     }

@@ -7,9 +7,9 @@ public class getitemvisible : MonoBehaviour
     private getitem jump;
     public int jumpi = 1;
     public Vector3[] itemplace;
-    public int itemnumber,save,load; //Àò±o¶¶§Ç,¦s·í¤U¦ì¸m,¦^¶Ç­ì¦ì¸m
+    public int itemnumber,save,load; //ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½,ï¿½sï¿½ï¿½ï¿½Uï¿½ï¿½m,ï¿½^ï¿½Ç­ï¿½ï¿½m
     public GameObject jumpitem;
-    public GameObject jumpbuff; //¬O§_Àò±oª««~
+    public GameObject jumpbuff; //ï¿½Oï¿½_ï¿½ï¿½oï¿½ï¿½ï¿½~
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class getitemvisible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Àò±oª««~Åã¥Ü
+        //ï¿½ï¿½oï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½
         if(jump.activejump == 0 && jumpi == 1 && itemnumber < 6)
         {
             jumpitem.SetActive(true);   
@@ -40,13 +40,13 @@ public class getitemvisible : MonoBehaviour
 
             if(transform.position.y >= 65)
             {
-                jumpitem.transform.position += new Vector3(0,120,0);
+                jumpitem.transform.position += new Vector3(0,300,0);
             }
         }
         //..........
 
 
-        //ª««~®ø¯Ó
+        //ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½ï¿½
         if(jumpi != 1 && jump.activejump == 1)
         {
             save = itemnumber;
@@ -54,7 +54,7 @@ public class getitemvisible : MonoBehaviour
         }
 
 
-        //ª««~¸É¤WªÅ¦ì«á¶¶§Ç·ÓÂÂ
+        //ï¿½ï¿½ï¿½~ï¿½É¤Wï¿½Å¦ï¿½á¶¶ï¿½Ç·ï¿½ï¿½ï¿½
         if(load == 1)
         {
             if(save != 0)

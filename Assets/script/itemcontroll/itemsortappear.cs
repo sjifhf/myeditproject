@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class itemsortappear : MonoBehaviour
 {
-    public float speed = 2f;          // ª««~¥X²{³t«×
-    public bool invisible = true;    // ª««~¬O§_ÁôÂÃ
+    public float speed = 10f;          // ï¿½ï¿½ï¿½~ï¿½Xï¿½{ï¿½tï¿½ï¿½
+    public bool invisible = true;    // ï¿½ï¿½ï¿½~ï¿½Oï¿½_ï¿½ï¿½ï¿½ï¿½
     public Vector3 origform,finalpos;
     public bool upactive = false,downactive = false;
     // Start is called before the first frame update
@@ -13,7 +13,7 @@ public class itemsortappear : MonoBehaviour
     {
         invisible = true;
         origform = transform.position;
-        finalpos = origform + new Vector3(0,120,0);
+        finalpos = origform + new Vector3(0,300,0);
     }
 
     // Update is called once per frame
